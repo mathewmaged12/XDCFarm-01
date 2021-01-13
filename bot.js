@@ -2,7 +2,7 @@
 //copyright © Angry Black 2020.//❦Angry Black❦
 
 const Discord = require("discord.js");
-const myid = ['Your ID'];//هنا بتحط الايدى بتاعك بتاع الديسكورد
+const myid = ['622742077259644928'];//هنا بتحط الايدى بتاعك بتاع الديسكورد
 const client = new Discord.Client();
 const client2 = new Discord.Client();
 const client3 = new Discord.Client();
@@ -27,6 +27,8 @@ const client21 = new Discord.Client();
 const client22 = new Discord.Client();
 const client23 = new Discord.Client();
 const client24 = new Discord.Client();
+const client25 = new Discord.Client();
+
 
 //✠▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ☢❦۞❦☢ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬✠//BY: POULAZ (Angry Black)
 
@@ -54,6 +56,8 @@ client21.login(process.env.TOKEN21);
 client22.login(process.env.TOKEN22);
 client23.login(process.env.TOKEN23);
 client24.login(process.env.TOKEN24);
+client25.login(process.env.TOKEN25);
+
 
 //✠▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ☢❦۞❦☢ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬✠//BY: POULAZ (Angry Black)
 
@@ -383,6 +387,23 @@ message.channel.send('#credits')
   }
 });
 
+client25.on('message', message => {
+  if (message.content === '$d') {
+message.channel.send('#daily')
+  }
+  if(message.content === '$c'){
+message.channel.send('#credits')
+  }
+ if(message.content ===  '$u'){
+message.channel.send("©angryblack YT")
+  }   
+  if(message.content.startsWith("$s")) {
+
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
+  }
+});
+
 //✠▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ☢❦۞❦☢ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬✠//BY: POULAZ (Angry Black)
 
 
@@ -718,6 +739,20 @@ if (message.content === '$spam') {
       let ecount = 0;
       for(let x = 0; x < 30000; x++) {
         message.channel.send(`**??? ???? ??? ?? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
+
+client25.on('message', message => {
+if (message.content === '$spam') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 30000; x++) {
+        message.channel.send(`**??? ???? ??? **[ " ${x} " ]`)
           .then(m => {
             count++;
           })
@@ -877,6 +912,12 @@ client23.on('message', message => {
 });
 
 client24.on('message', message => {
+    if(message.content === '!rep'){
+        message.channel.send("#rep "+"<@" + myid + ">")
+    }
+});
+
+client25.on('message', message => {
     if(message.content === '!rep'){
         message.channel.send("#rep "+"<@" + myid + ">")
     }
